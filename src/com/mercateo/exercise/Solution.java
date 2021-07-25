@@ -24,7 +24,7 @@ import java.util.Scanner;
  */
 public class Solution {
 
-    public void getMaximumCostPackage(int[] costs, int[] weights, int maxWeight) {
+    public void selectItemsToGetMaximumCost(int[] costs, int[] weights, int maxWeight) {
 
         //Basic validations
         if (costs == null || costs.length == 0 || weights == null || weights.length == 0) {
@@ -85,7 +85,7 @@ public class Solution {
             String line = input.nextLine();
             if (!line.isEmpty()) {
                 final ItemParser itemParser = new ItemParser(line);
-                new Solution().getMaximumCostPackage(itemParser.getCosts(), itemParser.getWeight(), itemParser.getMaxWeight());
+                new Solution().selectItemsToGetMaximumCost(itemParser.getCosts(), itemParser.getWeight(), itemParser.getMaxWeight());
             }
         }
     }
